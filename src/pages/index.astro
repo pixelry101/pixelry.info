@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const Button =
+	'light-button inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border-2 border-[#1400ca]/70 bg-black/45 px-4 text-sm font-extrabold text-[#004cff] backdrop-blur-sm transition duration-300 ease-[cubic-bezier(.16,1,.3,1)] hover:-translate-y-1 hover:border-[#004cff] hover:text-blue-100';
+---
+
+<Layout>
+	<main
+		class="relative z-10 mx-auto grid min-h-svh w-[min(100%-1.25rem,56rem)] place-items-center px-2 py-7 sm:w-[min(100%-3rem,68rem)] sm:px-6 lg:w-[min(100%-6rem,78rem)]"
+	>
+		<section class="w-full">
+			<aside
+				class="animate-page-open group relative mx-auto grid w-full max-w-5xl gap-7 overflow-hidden rounded-[1.2rem] border-[5px] border-[#1400ca]/50 bg-[#1400ca]/25 p-5 lg:grid-cols-[16rem_1fr] lg:p-10"
+				id="profile"
+			>
+
+				<div class="relative flex justify-center lg:justify-start">
+					<img
+						class="aspect-square w-24 rounded-full border-6 border-[#1400ca]/50 object-cover transition-shadow duration-700 ease-[cubic-bezier(.16,1,.3,1)] sm:w-36 lg:w-52"
+						src="/profile.png"
+						alt="Pixelry profile picture"
+						draggable="false"
+					/>
+				</div>
+
+				<div class="relative grid min-w-0 gap-4">
+					<div>
+						<h1
+							id="profile-title"
+							class="mx-auto flex max-w-2xl items-center justify-center gap-[0.12em] text-center text-[clamp(2.65rem,9vw,5.4rem)] font-black leading-[0.88] tracking-normal text-[#0000ff] [-webkit-text-stroke:2.5px_black] lg:mx-0 lg:justify-start lg:text-left"
+						>
+							hi.
+							<button
+								class="wave-emoji-trigger grid size-[0.7em] shrink-0 cursor-pointer place-items-center border-0 bg-transparent p-0 leading-none focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-blue-100"
+								type="button"
+							>
+								<img
+									class="wave-emoji size-full"
+									src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2096%2096%22%3E%3Cdefs%3E%3Csymbol%20id%3D%22e0%22%20viewBox%3D%220%200%2036%2036%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M4.861%209.147c.94-.657%202.357-.531%203.201.166l-.968-1.407c-.779-1.111-.5-2.313.612-3.093%201.112-.777%204.263%201.312%204.263%201.312-.786-1.122-.639-2.544.483-3.331%201.122-.784%202.67-.513%203.456.611l10.42%2014.72L25%2031l-11.083-4.042L4.25%2012.625c-.793-1.129-.519-2.686.611-3.478z%22%20data-fill-layer-id%3D%22emoji-1-1f44b-fill-1-ef9645%22%20data-editor-display%3D%22visible%22%20%2F%3E%3Cpath%20fill%3D%22%230000ff%22%20d%3D%22M2.695%2017.336s-1.132-1.65.519-2.781c1.649-1.131%202.78.518%202.78.518l5.251%207.658c.181-.302.379-.6.6-.894L4.557%2011.21s-1.131-1.649.519-2.78c1.649-1.131%202.78.518%202.78.518l6.855%209.997c.255-.208.516-.417.785-.622L7.549%206.732s-1.131-1.649.519-2.78c1.649-1.131%202.78.518%202.78.518l7.947%2011.589c.292-.179.581-.334.871-.498L12.238%204.729s-1.131-1.649.518-2.78c1.649-1.131%202.78.518%202.78.518l7.854%2011.454%201.194%201.742c-4.948%203.394-5.419%209.779-2.592%2013.902.565.825%201.39.26%201.39.26-3.393-4.949-2.357-10.51%202.592-13.903L24.515%208.62s-.545-1.924%201.378-2.47c1.924-.545%202.47%201.379%202.47%201.379l1.685%205.004c.668%201.984%201.379%203.961%202.32%205.831%202.657%205.28%201.07%2011.842-3.94%2015.279-5.465%203.747-12.936%202.354-16.684-3.11L2.695%2017.336z%22%20data-fill-layer-id%3D%22emoji-1-1f44b-fill-2-ffdc5d%22%20data-editor-display%3D%22visible%22%20%2F%3E%3Cg%20fill%3D%22%235dadec%22%20data-fill-layer-id%3D%22emoji-1-1f44b-fill-3-5dadec%22%20data-editor-display%3D%22visible%22%3E%3Cpath%20d%3D%22M12%2032.042C8%2032.042%203.958%2028%203.958%2024c0-.553-.405-1-.958-1s-1.042.447-1.042%201C1.958%2030%206%2034.042%2012%2034.042c.553%200%201-.489%201-1.042s-.447-.958-1-.958z%22%20%2F%3E%3Cpath%20d%3D%22M7%2034c-3%200-5-2-5-5%200-.553-.447-1-1-1s-1%20.447-1%201c0%204%203%207%207%207%20.553%200%201-.447%201-1s-.447-1-1-1zM24%202c-.552%200-1%20.448-1%201s.448%201%201%201c4%200%208%203.589%208%208%200%20.552.448%201%201%201s1-.448%201-1c0-5.514-4-10-10-10z%22%20%2F%3E%3Cpath%20d%3D%22M29%20.042c-.552%200-1%20.406-1%20.958s.448%201.042%201%201.042c3%200%204.958%202.225%204.958%204.958%200%20.552.489%201%201.042%201s.958-.448.958-1C35.958%203.163%2033%20.042%2029%20.042z%22%20%2F%3E%3C%2Fg%3E%3C%2Fsymbol%3E%3C%2Fdefs%3E%3Cuse%20href%3D%22%23e0%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2296%22%20height%3D%2296%22%2F%3E%3C%2Fsvg%3E"
+									draggable="false"
+								/>
+							</button>
+						</h1>
+						<p class="mx-auto mt-3 max-w-[62ch] text-center text-base font-semibold leading-8 text-blue-100/85 sm:text-lg lg:mx-0 lg:text-left">
+							I'm <span class="text-[1.18em] font-black text-[#0000ff] [-webkit-text-stroke:.8px_black]">Pixelry</span>, and sometimes I make cool things
+						</p>
+					</div>
+
+					<div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+						<a
+							class={Button}
+							href="https://github.com/pixelry101" target="_blank" 
+						>
+							<svg class="size-5" viewBox="0 0 24 24">
+								<path
+									fill="currentColor"
+									d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.9c-2.78.62-3.37-1.22-3.37-1.22-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.55-1.14-4.55-5.07 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05A9.35 9.35 0 0 1 12 6.95c.85 0 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.8-4.57 5.06.36.32.68.95.68 1.92v2.84c0 .27.18.59.69.49A10.24 10.24 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"
+								/>
+							</svg>
+							<span class="button-label">GitHub</span>
+						</a>
+						<a
+							class={Button}
+							href="https://youtube.com/@Pixelry101" target="_blank" 
+						>
+							<svg class="size-5" viewBox="0 0 24 24">
+								<path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+							</svg>
+							<span class="button-label">YouTube</span>
+						</a>
+						<a
+							class={Button}
+							href="mailto:pixelryx@proton.me" target="_blank" 
+						>
+							<svg class="size-5" viewBox="0 0 24 24">
+								<path
+									fill="currentColor"
+									d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm8 7.3L4.75 7H4v.7l8 5.85 8-5.85V7h-.75L12 12.3Z"
+								/>
+							</svg>
+							<span class="button-label">Email</span>
+						</a>
+					</div>
+				</div>
+			</aside>
+		</section>
+	</main>
+</Layout>
+
+<script>
+	document.querySelectorAll<HTMLButtonElement>('.wave-emoji-trigger').forEach((trigger) => {
+		trigger.addEventListener('click', () => {
+			const emoji = trigger.querySelector<HTMLElement>('.wave-emoji');
+			if (!emoji) return;
+
+			emoji.classList.remove('is-replaying');
+			void emoji.offsetWidth;
+			emoji.classList.add('is-replaying');
+		});
+	});
+</script>
