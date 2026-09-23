@@ -1,2 +1,1 @@
-# pixelry.info
-personal website
+My personal website, made with Astro & Tailwind
